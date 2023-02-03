@@ -4,6 +4,6 @@ title = 'My New Hugo Site'
 
 
 [permalinks]
-  frogs = '/:title/'
-  insects = '/:title/'
+  category = "/:title/"
+
 
