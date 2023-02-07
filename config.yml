@@ -1,0 +1,57 @@
+baseURL: /
+languageCode: en-us
+title: My New Hugo Site
+permalinks:
+  category: /:title/
+
+menu:
+  main:
+    - pageRef: /
+      name: Home
+      url: /
+      weight: 10
+
+    - pageRef: /category/amphibian/
+      name: Amphibians
+      url: /category/amphibian/
+      weight: 20
+    - pageRef: /category/amphibian/soft/
+      name: Soft
+      url: /category/amphibian/soft/
+      weight: 10
+      parent: Amphibians
+    - pageRef: /category/amphibian/hard/
+      name: Hard
+      url: /category/amphibian/hard/
+      weight: 20
+
+      parent: Amphibians
+    - pageRef: /category/frogs/
+      name: Frogs
+      url: /category/frogs/
+      weight: 30
+    - pageRef: /category/frogs/green/
+      name: Green
+      url: /category/frogs/green/
+      weight: 10
+      parent: Frogs
+    - pageRef: /category/frogs/orange/
+      name: Orange
+      url: /category/frogs/orange/
+      weight: 20
+      parent: Frogs
+
+    - pageRef: /category/insects/
+      name: Insects
+      url: /category/insects/
+      weight: 40
+    - pageRef: /category/insects/long/
+      name: Long
+      url: /category/insects/long/
+      weight: 10
+      parent: Insects
+    - pageRef: /category/insects/short/
+      name: Short
+      url: /category/insects/short/
+      weight: 20
+      parent: Insects

@@ -1,8 +1,0 @@
-<ul>
-    {{ range .Sections }}
-      {{ if ne .Title "Category"}}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
-      {{ partial "recursiveHeader.html" . }}
-    {{ end }}
-</ul>
