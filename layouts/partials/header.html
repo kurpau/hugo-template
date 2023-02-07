@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<header>
+  <a href="/" class="logo">Hugo Features</a>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
-</head>
-
-<body>
-  <nav>
-    {{ partial "sidebar.html" . }}
+  <nav class="navbar">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ if .HasChildren }}
+        <ul>
+          {{ range .Children }}
+          <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
   </nav>
+</header>
