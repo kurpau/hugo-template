@@ -5,9 +5,8 @@
     <ul>
       {{ range .Site.Menus.main }}
       <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
-        {{ if .HasChildren }}
-        <ul>
+        <a href="{{ .URL }}" aria-haspopup="true">{{ .Name }}</a>
+        <ul class="dropdown" aria-label="submenu">
           {{ range .Children }}
           <li>
             <a href="{{ .URL }}">{{ .Name }}</a>
@@ -16,7 +15,6 @@
         </ul>
         {{ end }}
       </li>
-      {{ end }}
     </ul>
   </nav>
 </header>

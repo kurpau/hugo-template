@@ -1,0 +1,63 @@
+header a {
+  text-decoration: none;
+}
+
+header nav {
+  font-family: monospace;
+}
+
+header ul {
+  background: white;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+header li {
+  color: black;
+  background: white;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+}
+  
+header li a {
+  color: black;
+}
+
+header li a:hover {
+  color: red;
+}
+
+header li:hover,
+header li:focus-within {
+  background: white;
+  cursor: pointer;
+}
+
+header ul li ul {
+  background: black;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+header ul li:focus-within > ul,
+header ul li:hover > ul,
+header ul li ul:hover,
+header ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+header ul li ul li {
+  clear: both;
+  width: 100%;
+}
