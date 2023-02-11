@@ -6,24 +6,24 @@ header {
   position: fixed;
   top: 0; left: 0; right: 0;
   background: white;
-  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   padding: 20px 7%;
   z-index: 1000;
 }
 
 header .logo {
-  font-weight: bolder;
+  font-weight: 700;
   font-size: 25px;
   color: #333;
 }
 
 header a {
   text-decoration: none;
-  font-family: monospace;
+  font-family: Arial;
   color: black;
   background: white;
+  font-size: 19px;
   font-weight: 500;
-  font-size: 18px;
 }
 
 .navbar ul {
@@ -66,7 +66,7 @@ header a {
   margin-top: 1rem;
   left: 0;
   display: none;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 .navbar ul li:focus-within > ul,
@@ -85,5 +85,5 @@ header a {
 
 .navbar ul li ul li a {
   font-weight: 600;
-  font-size: 25px;
+  font-size: 22px;
 }
