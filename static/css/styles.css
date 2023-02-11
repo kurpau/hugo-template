@@ -1,5 +1,8 @@
 .main {
   position: relative;
   margin-top: 15vh;
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 2.67rem;
 }
 

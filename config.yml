@@ -6,11 +6,6 @@ permalinks:
 
 menu:
   main:
-    - pageRef: /
-      name: Home
-      url: /
-      weight: 10
-
     - pageRef: /category/amphibian/
       name: Amphibians
       url: /category/amphibian/
