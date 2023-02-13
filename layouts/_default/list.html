@@ -2,22 +2,37 @@
 
 <body>
   {{ $pages := .Pages }}
-  {{ if .IsHome }}{{ $pages = .Site.AllRegularPages }}{{ end }}
-  {{ range $pages }}
-  <div style="border: 1px solid black; margin:10px; padding:10px; ">
-    <div style="font-size:20px;">
-      <a href="{{.Permalink}}">{{.Title}}</a>
+
+  {{ if .IsHome }}
+    {{ $pages = .Site.AllRegularPages }}
+
+    {{ range (where $pages "Section" "category") }}
+    <div style="border: 1px solid black; margin:10px; padding:10px; ">
+      <div style="font-size:20px;">
+        <a href="{{.Permalink}}">{{.Title}}</a>
+      </div>
+
+      <p style="font-size:18px;">{{.Summary}}</p>
     </div>
+    {{ end }}
+  {{ else }}
+    {{ range $pages }}
+      <div style="border: 1px solid black; margin:10px; padding:10px; ">
+        <div style="font-size:20px;">
+          <a href="{{.Permalink}}">{{.Title}}</a>
+        </div>
 
-    <p style="font-size:18px;">{{.Summary}}</p>
-  </div>
+        <p style="font-size:18px;">{{.Summary}}</p>
+      </div>
+    {{ end }}
+
+    {{ if eq (len .CurrentSection.RegularPages) 0 }}
+
+      {{ partial "recursive.html" . }}
+
+    {{ end }}
   {{ end }}
 
-  {{ if eq (len .CurrentSection.RegularPages) 0 }}
 
-    {{ partial "recursive.html" . }}
-
-  {{ end }}
-  
 </body>
 {{ end }}
