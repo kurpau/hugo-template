@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <body>
-  {{ $pages := .Pages }}
+  {{ $pages := .Sections }}
 
   {{ if .IsHome }}
     {{ $pages = .Site.AllRegularPages }}
@@ -26,11 +26,8 @@
       </div>
     {{ end }}
 
-    {{ if eq (len .CurrentSection.RegularPages) 0 }}
+    {{ partial "recursive.html" . }}
 
-      {{ partial "recursive.html" . }}
-
-    {{ end }}
   {{ end }}
 
 
