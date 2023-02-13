@@ -1,18 +1,20 @@
 {{ define "main" }}
 
 <body>
-  <div id="blog">
     {{ if .IsHome }}
-      {{ range (where .Site.AllRegularPages "Section" "category") }}
-        {{ partial "blog-card.html" . }}
-      {{ end }}
+      <div class="blog">
+        {{ range (where .Site.AllRegularPages "Section" "category") }}
+            {{ partial "blog-card.html" . }}
+        {{ end }}
+      </div>
     {{ else }}
       {{ range .Sections }}
         {{ partial "section-card.html" . }}
       {{ end }}
-      {{ partial "recursive.html" . }}
+      <div class="blog">
+        {{ partial "recursive.html" . }}
+      </div>
     {{ end }}
-  </div>
 
 </body>
 {{ end }}

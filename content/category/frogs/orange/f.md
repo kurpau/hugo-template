@@ -2,6 +2,9 @@
 title: "F"
 date: 2023-02-01T13:53:28+02:00
 draft: true
+cover:
+  image: "/img/blog-3.jpeg"
+  alt: ""
 ---
 
 

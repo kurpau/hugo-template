@@ -2,6 +2,9 @@
 title: "B"
 date: 2023-02-01T13:53:23+02:00
 draft: true
+cover:
+  image: "/img/blog-2.jpeg"
+  alt: ""
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum ultricies erat, a hendrerit nulla ullamcorper in. Curabitur et arcu eget ipsum tempor pellentesque. Mauris ullamcorper sapien vel sem mollis, ut hendrerit odio efficitur. Donec vel lorem gravida, aliquet nunc sed, luctus lacus. Mauris tincidunt elit eros, at tincidunt orci fermentum ut. Integer nec dolor in erat accumsan pharetra id et nunc. Phasellus dictum pellentesque urna vitae imperdiet.
