@@ -1,35 +1,18 @@
 {{ define "main" }}
 
 <body>
-  {{ $pages := .Sections }}
-
-  {{ if .IsHome }}
-    {{ $pages = .Site.AllRegularPages }}
-
-    {{ range (where $pages "Section" "category") }}
-    <div style="border: 1px solid black; margin:10px; padding:10px; ">
-      <div style="font-size:20px;">
-        <a href="{{.Permalink}}">{{.Title}}</a>
-      </div>
-
-      <p style="font-size:18px;">{{.Summary}}</p>
-    </div>
+  <div id="blog">
+    {{ if .IsHome }}
+      {{ range (where .Site.AllRegularPages "Section" "category") }}
+        {{ partial "blog-card.html" . }}
+      {{ end }}
+    {{ else }}
+      {{ range .Sections }}
+        {{ partial "section-card.html" . }}
+      {{ end }}
+      {{ partial "recursive.html" . }}
     {{ end }}
-  {{ else }}
-    {{ range $pages }}
-      <div style="border: 1px solid black; margin:10px; padding:10px; ">
-        <div style="font-size:20px;">
-          <a href="{{.Permalink}}">{{.Title}}</a>
-        </div>
-
-        <p style="font-size:18px;">{{.Summary}}</p>
-      </div>
-    {{ end }}
-
-    {{ partial "recursive.html" . }}
-
-  {{ end }}
-
+  </div>
 
 </body>
 {{ end }}

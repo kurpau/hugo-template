@@ -1,8 +1,26 @@
-.main {
-  position: relative;
-  margin-top: 15vh;
-  font-size: 1.7rem;
-  font-weight: 300;
-  line-height: 2.67rem;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main {
+  margin-top: 130px;
+}
+
 

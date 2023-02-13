@@ -1,0 +1,14 @@
+<div class="blog-container">
+  <div class="blog-box">
+    <div class="blog-img">
+      <a href="{{ .Permalink }}"><img src="{{ .Params.cover.image }}"></a>
+    </div>
+
+    <div class="blog-text">
+      <span>{{ .Params.date | time.Format ":date_long" }} / {{ .CurrentSection.Title }}</span>
+      <a class="blog-title" href="{{ .Permalink }}">{{.Title}}</a>
+      <p>{{ .Summary }}</p>
+    </div>
+
+  </div>
+</div>
