@@ -1,11 +1,13 @@
 .grid {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 0.5rem;
 }
 
 .blog-box {
-  width: 350px;
+  width: 275px;
   background-color: #ffffff;
   border: 1px solid #ececec;
   margin: 20px 20px;
