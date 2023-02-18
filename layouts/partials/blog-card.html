@@ -5,9 +5,13 @@
     </div>
 
     <div class="blog-text">
-      <span>{{ .Params.date | time.Format ":date_long" }} / {{ .CurrentSection.Title }}</span>
-      <a class="blog-title" href="{{ .Permalink }}">{{.Title}}</a>
-      <p>{{ .Summary }}</p>
+      <div class="card-meta">
+        <span id="section-title"><a href="{{ .CurrentSection.Permalink }}">{{ .CurrentSection.Title }}</a></span>
+        <span id="reading-time">{{ .ReadingTime }} min read</span>
+      </div>
+      <a id="blog-title" href="{{ .Permalink }}">{{.Title}}</a>
+      <p id="summary">{{ .Summary }}</p>
+      <span id="date">{{ .Params.date | time.Format ":date_medium" }} </span>
     </div>
   </div>
 </div>

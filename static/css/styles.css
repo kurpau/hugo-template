@@ -1,8 +1,9 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   box-sizing: border-box;
+  line-height: 1.15;
 }
 
 a {
@@ -14,7 +15,6 @@ ul {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
   background-color: #f3f5f7;
   min-height: 100vh;
   display: flex;
@@ -31,16 +31,5 @@ body {
 
 
 
-.hero {
-  /* Photo by mnm.all on Unsplash */
-  background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
-  background-size: cover;
-  padding: 4rem 2rem;
-
-  /* Grid styles */
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
 
 
