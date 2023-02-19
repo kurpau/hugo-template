@@ -1,6 +1,0 @@
-{{ range .Pages }}
-  {{ if eq .Kind "page"}}
-    {{ partial "blog-card.html" . }}
-  {{ end }}
-  {{ partial "recursive.html" . }}
-{{ end }}

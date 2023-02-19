@@ -6,8 +6,8 @@ header {
   position: fixed;
   top: 0; left: 0; right: 0;
   background: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px 7%;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  padding: 24px 7%;
   z-index: 1000;
 }
 
@@ -19,7 +19,6 @@ header .logo {
 
 header a {
   text-decoration: none;
-  font-family: Arial;
   color: black;
   background: white;
   font-size: 19px;
@@ -86,4 +85,34 @@ header a {
 .navbar ul li ul li a {
   font-weight: 600;
   font-size: 22px;
+}
+
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media(max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+
+  header label {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
