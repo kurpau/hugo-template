@@ -4,6 +4,8 @@ title: Hugo Features
 permalinks:
   category: /:title/
 
+paginate: 5
+
 menu:
   main:
     - pageRef: /category/amphibian/
@@ -50,3 +52,18 @@ menu:
       url: /category/insects/short/
       weight: 20
       parent: Insects
+
+    - pageRef: /category/worms/
+      name: Worms
+      url: /category/worms/
+      weight: 50
+    - pageRef: /category/worms/red/
+      name: Red
+      url: /category/worms/red/
+      weight: 10
+      parent: Worms
+    - pageRef: /category/worms/black/
+      name: Black
+      url: /category/worms/black/
+      weight: 20
+      parent: Worms
