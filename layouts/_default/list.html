@@ -3,7 +3,8 @@
 <body>
     {{ if .IsHome }}
       <div class="grid">
-        {{ range (where .Site.AllRegularPages "Section" "category") }}
+        {{ $paginator := .Paginate (where .Site.AllRegularPages "Section" "category") }}
+        {{ range $paginator.Pages }}
             {{ partial "blog-card.html" . }}
         {{ end }}
       </div>
@@ -12,9 +13,14 @@
         {{ partial "section-card.html" . }}
       {{ end }}
       <div class="grid">
-        {{ partial "recursive.html" . }}
+      {{ $paginator := .Paginate .RegularPagesRecursive }}
+      {{ range $paginator.Pages }}
+          {{ partial "blog-card.html" . }}
+      {{ end }}
       </div>
     {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
 
 </body>
 {{ end }}
