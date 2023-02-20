@@ -2,25 +2,29 @@
   <a href="/" class="logo">Hugo Features</a>
 
   <input type="checkbox" id="menu-bar">
-  <label for="menu-bar">Menu</label>
+  <label for="menu-bar">&#9776;</label>
 
   <nav class="navbar">
     <ul>
-      {{ range .Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}" aria-haspopup="true">{{ .Name }}</a>
-        <ul class="dropdown" aria-label="submenu">
-          {{ range .Children }}
-          <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
-          </li>
-          {{ end }}
-        </ul>
+      <div class="categories">
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}" aria-haspopup="true">{{ .Name }}</a>
+          <ul class="dropdown" aria-label="submenu">
+            {{ range .Children }}
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </li>
         {{ end }}
-      </li>
+      </div>
+      <!-- <div class="external">
+        <li>
+          <a href="/misc/about">About Us</a>
+        </li>
+      </div> -->
     </ul>
   </nav>
-  <ul class="external">
-    <a href="/misc/about">About Us</a>
-  </ul>
 </header>

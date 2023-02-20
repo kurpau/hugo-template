@@ -1,6 +1,6 @@
 baseURL: /
 languageCode: en-us
-title: Hugo Features
+title: Hugo Features 
 permalinks:
   category: /:title/
 

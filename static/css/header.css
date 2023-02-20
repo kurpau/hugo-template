@@ -1,15 +1,23 @@
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0; left: 0; right: 0;
   background: white;
-  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
   padding: 24px 7%;
   z-index: 1000;
 }
+
+/* .navbar {
+  width: 80%;
+  display: inline-block;
+} */
+
+/* .navbar ul .external {
+  float: right;
+} */
 
 header .logo {
   font-weight: 700;
@@ -102,17 +110,58 @@ header label {
 
 @media(max-width: 991px) {
   header {
-    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .navbar li {
+    padding: 0 7%;
   }
 
   header label {
     display: initial;
+    float: right;
   }
 
   header .navbar {
     position: absolute;
     top: 100%; left: 0; right: 0;
     background: #fff;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+    padding-bottom: 24px;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  header .navbar ul li {
+    width: 100%;
+    padding-bottom: 22px;
+  }
+
+  header .navbar ul li a {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  header .navbar ul li ul {
+    padding: 5px 0 0 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  header .navbar ul li ul li {
+    padding: 0;
+  }
+
+  header .navbar ul li ul li a {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  #menu-bar:checked ~ .navbar {
+    display: initial;
   }
 }
