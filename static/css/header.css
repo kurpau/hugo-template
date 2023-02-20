@@ -1,28 +1,39 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   position: fixed;
   top: 0; left: 0; right: 0;
   background: white;
-  padding: 24px 7%;
+  padding: 24px 7vw;
   z-index: 1000;
 }
 
-/* .navbar {
+.navbar {
   width: 80%;
-  display: inline-block;
-} */
+}
 
-/* .navbar ul .external {
+.navbar ul .categories {
+  margin: 0 auto;
+  height: auto;
+  width: 80%;
+}
+
+.navbar ul .external {
+  width: 20%;
   float: right;
-} */
+}
 
 header .logo {
+  width: 20%;
+}
+
+header .logo a {
   font-weight: 700;
   font-size: 25px;
   color: #333;
+  white-space: nowrap;
 }
 
 header a {
@@ -113,8 +124,11 @@ header label {
     justify-content: space-between;
   }
 
+
   .navbar li {
-    padding: 0 7%;
+    width: 100%;
+    padding: 0 7vw;
+    white-space: nowrap;
   }
 
   header label {
@@ -153,7 +167,7 @@ header label {
   }
 
   header .navbar ul li ul li {
-    padding: 0;
+    padding: 0 7%;
   }
 
   header .navbar ul li ul li a {
@@ -163,5 +177,13 @@ header label {
 
   #menu-bar:checked ~ .navbar {
     display: initial;
+  }
+
+  .navbar ul .categories {
+    margin: 0 ;
+  }
+
+  .navbar ul .external {
+    float: none;
   }
 }
