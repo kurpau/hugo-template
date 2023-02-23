@@ -1,3 +1,23 @@
+.section-hero {
+  max-width: 1000px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.section-caption {
+  width: 75%;
+  margin-top: 20px;
+}
+
+.section-caption p {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .sections {
   margin-top: 24px;
   margin-right: 0px;

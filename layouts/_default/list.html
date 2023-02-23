@@ -1,7 +1,6 @@
 {{ define "main" }}
 
 <body>
-    {{ .Content }}
     {{ if .IsHome }}
       <div class="grid">
         {{ $paginator := .Paginate (where .Site.AllRegularPages "Section" "category") }}
@@ -10,11 +9,7 @@
         {{ end }}
       </div>
     {{ else }}
-      <div class="sections">
-        {{ range .Sections }}
-          {{ partial "section-card.html" . }}
-        {{ end }}
-      </div>
+      {{ partial "section-description.html" . }}
       <div class="grid">
       {{ $paginator := .Paginate .RegularPagesRecursive }}
       {{ range $paginator.Pages }}
