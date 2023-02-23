@@ -1,0 +1,69 @@
+baseURL: /
+languageCode: en-us
+title: Hugo Features 
+permalinks:
+  category: /:title/
+
+paginate: 6
+
+menu:
+  main:
+    - pageRef: /category/amphibian/
+      name: Amphibians
+      url: /category/amphibian/
+      weight: 20
+    - pageRef: /category/amphibian/soft/
+      name: Soft
+      url: /category/amphibian/soft/
+      weight: 10
+      parent: Amphibians
+    - pageRef: /category/amphibian/hard/
+      name: Hard
+      url: /category/amphibian/hard/
+      weight: 20
+
+      parent: Amphibians
+    - pageRef: /category/frogs/
+      name: Frogs
+      url: /category/frogs/
+      weight: 30
+    - pageRef: /category/frogs/green/
+      name: Green
+      url: /category/frogs/green/
+      weight: 10
+      parent: Frogs
+    - pageRef: /category/frogs/orange/
+      name: Orange
+      url: /category/frogs/orange/
+      weight: 20
+      parent: Frogs
+
+    - pageRef: /category/insects/
+      name: Insects
+      url: /category/insects/
+      weight: 40
+    - pageRef: /category/insects/long/
+      name: Long
+      url: /category/insects/long/
+      weight: 10
+      parent: Insects
+    - pageRef: /category/insects/short/
+      name: Short
+      url: /category/insects/short/
+      weight: 20
+      parent: Insects
+
+    - pageRef: /category/worms/
+      name: Worms
+      url: /category/worms/
+      weight: 50
+    - pageRef: /category/worms/red/
+      name: Red
+      url: /category/worms/red/
+      weight: 10
+      parent: Worms
+    - pageRef: /category/worms/black/
+      name: Black
+      url: /category/worms/black/
+      weight: 20
+      parent: Worms

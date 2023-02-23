@@ -1,0 +1,10 @@
+.grid {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.blog-container {
+  margin: 0 auto;
+}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<body>
+    {{ .Content }}
+    {{ if .IsHome }}
+      <div class="grid">
+        {{ $paginator := .Paginate (where .Site.AllRegularPages "Section" "category") }}
+        {{ range $paginator.Pages }}
+            {{ partial "blog-card.html" . }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="sections">
+        {{ range .Sections }}
+          {{ partial "section-card.html" . }}
+        {{ end }}
+      </div>
+      <div class="grid">
+      {{ $paginator := .Paginate .RegularPagesRecursive }}
+      {{ range $paginator.Pages }}
+          {{ partial "blog-card.html" . }}
+      {{ end }}
+      </div>
+    {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
+
+</body>
+{{ end }}

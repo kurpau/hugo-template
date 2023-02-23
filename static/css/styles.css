@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Inter', Arial, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.15;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #f3f5f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  position: relative;
+  max-width: 80%;
+  height: 100%;
+  margin: 140px 0 120px 0;
+}

@@ -1,0 +1,35 @@
+.sections {
+  margin-top: 24px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+}
+
+.tag {
+  border: 0px;
+  outline: none;
+  background-color: rgb(246, 247, 248);
+  color: rgb(23, 26, 34);
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 50px;
+
+  display: inline-block;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tag a {
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 10px 16px;
+}
