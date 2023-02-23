@@ -21,8 +21,8 @@ menu:
       name: Hard
       url: /category/amphibian/hard/
       weight: 20
-
       parent: Amphibians
+
     - pageRef: /category/frogs/
       name: Frogs
       url: /category/frogs/
